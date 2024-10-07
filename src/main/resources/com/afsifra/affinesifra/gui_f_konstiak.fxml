@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #c8ddfd;" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.afsifra.affinesifra.Controller">
+   <children>
+      <TextField fx:id="kA" layoutX="108.0" layoutY="39.0" promptText="A klúč" />
+      <TextField fx:id="kB" layoutX="108.0" layoutY="75.0" promptText="B klúč" />
+      <TextField fx:id="sText" layoutX="344.0" layoutY="75.0" onKeyTyped="#handle_sText" promptText="Šifrovaný text" />
+      <Text fill="#3d83d5" layoutX="75.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zadaný text" wrappingWidth="64.0" />
+      <TextArea fx:id="TextZT" editable="false" layoutX="32.0" layoutY="186.0" prefHeight="193.0" prefWidth="149.0" />
+      <Text fill="#3d83d5" layoutX="258.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zašifrovaný text" />
+      <TextArea fx:id="TextZaT" editable="false" layoutX="226.0" layoutY="186.0" prefHeight="193.0" prefWidth="149.0" />
+      <TextArea fx:id="TextD" editable="false" layoutX="417.0" layoutY="186.0" prefHeight="193.0" prefWidth="149.0" />
+      <Text fill="#3d83d5" layoutX="449.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dešifrovaný text" />
+      <TextField fx:id="pText" layoutX="344.0" layoutY="39.0" onKeyTyped="#handle_pText" promptText="Pôvodný texť" />
+      <Text fill="#3d83d5" layoutX="273.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Affiní Šifra" />
+      <Button fx:id="btn1" layoutX="280.0" layoutY="39.0" mnemonicParsing="false" onAction="#handle_btn1" text="Set A" />
+      <Button fx:id="btn2" layoutX="281.0" layoutY="75.0" mnemonicParsing="false" onAction="#handle_btn2" text="Set B" />
+      <Text fill="#3d83d5" layoutX="131.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Abeceda" />
+      <Text fill="#3d83d5" layoutX="417.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Šif. Abeceda" />
+      <TextField fx:id="alphabet" editable="false" layoutX="47.0" layoutY="122.0" prefHeight="25.0" prefWidth="214.0" promptText="ABCDEFGHIJKLMNOPQRSTUVWXYZ" text="ABCDEFGHIJKLMNOPQRSTUVWXYZ" />
+      <TextField fx:id="sifalphabet" editable="false" layoutX="342.0" layoutY="122.0" prefHeight="25.0" prefWidth="214.0" promptText="Šif. Abeceda" />
+   </children>
+</AnchorPane>
