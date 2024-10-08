@@ -25,8 +25,3 @@ public class AfSifra extends Application{
     }
 }
 
-//        ChodAS hm = new ChodAS();
-//        hm.upravaZ();
-//        hm.opravaMedzeraACisla();
-////        hm.osetrenieOstatok();
-//        hm.vypis();

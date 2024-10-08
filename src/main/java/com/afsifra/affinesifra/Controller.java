@@ -35,7 +35,7 @@ public class Controller {
 
     @FXML
     private TextField alphabet;
-
+    // výpočet pre najvačší spoločný delitel
     int gcd(int paa , int pab) {
         while (pab != 0) {
             int medzi = pab;
@@ -51,7 +51,7 @@ public class Controller {
 
         return as.povodnyText;
     }
-
+    // buttony + kontrola validity klúčov A a B
     @FXML
     boolean handle_btn1() {
         //Kontrola ci je vstup INT
@@ -101,13 +101,13 @@ public class Controller {
 
         return isInt;
     }
-
+    // vypis Sifrovanje abecedy do textfieldu
     void setSifAlphabet() {
         String input = alphabet.getText();
         as.setPovodnyText(input);
         sifalphabet.setText(as.sifrovanie(input).replaceAll(" ", ""));
     }
-
+    //kontrola oboch buttonov validity hodnot v textfieldoch pre kluče
     boolean checkKeys() {
         if (handle_btn1() && handle_btn2()) {
             setSifAlphabet();

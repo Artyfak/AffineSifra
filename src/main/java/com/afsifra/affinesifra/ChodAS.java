@@ -6,7 +6,7 @@ public class ChodAS {
     private char [] poleP = new char[26];
     public int a, b;
     public String povodnyText;
-
+// naplnenie polí
     public ChodAS() {
         int i = 0;
         for (char znak = 'A'; znak <= 'Z'; znak++) {
@@ -35,7 +35,7 @@ public class ChodAS {
     public void setPovodnyText(String povodnyText) {
         this.povodnyText = povodnyText;
     }
-
+// vrati cislo na základe písmena
     public int getCislo(char pismeno) {
         int vysledok = 0;
         for (int i = 0; i < 26; i++) {
@@ -43,7 +43,7 @@ public class ChodAS {
         }
         return vysledok;
     }
-
+// ošetrenie šifry o makšene a dĺžne
     public void upravaZ(){
         povodnyText = povodnyText.toLowerCase();
         povodnyText = povodnyText.replaceAll("á","A");
@@ -64,7 +64,7 @@ public class ChodAS {
         povodnyText = povodnyText.toUpperCase();
         povodnyText = povodnyText.replaceAll("\\p{Punct}", "");
     }
-
+// ošetrenie medzery a čísla
     public void opravaMedzeraACisla(){
         povodnyText = povodnyText.replaceAll(" ","XMEZERAX");
         povodnyText = povodnyText.replaceAll("1","XONEX");
@@ -78,7 +78,7 @@ public class ChodAS {
         povodnyText = povodnyText.replaceAll("9","XNINEX");
         povodnyText = povodnyText.replaceAll("0","XZEROX");
     }
-
+// šifrovnie už upraveného textu
     public String sifrovanie(String apt){
         String resultBezM = "";
         String resultSM = "";
@@ -97,7 +97,7 @@ public class ChodAS {
         }
         return resultSM;
     }
-
+//dekódovanie textu sposobom prechodu po texte
     public String decodovanie(String input) {
         String result = "";
         input = input.replaceAll(" ","");
@@ -122,7 +122,7 @@ public class ChodAS {
         result = result.replaceAll("XZEROX", "0");
         return result;
     }
-
+// inverzné modulo vyuzitie pre desifrovanie
     public int inModulo(int keyA) {
         keyA = keyA % 26;
         for (int i = 0; i < 26; i++) {
